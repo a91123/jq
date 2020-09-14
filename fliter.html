@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrap">
+      <span class="box">123</span>
+      <div class="box">box1</div>
+      <div class="box">box2</div>
+      <div class="box">box3</div>
+      <div class="box">box4</div>
+      <div class="box">box5</div>
+    </div>
+    <h1>hehe</h1>
+    <h6>hehe</h6>
+    <!-- <h1>123</h1> -->
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    //   選到該元素的第一個子元素 如果沒空格 就會選到全部
+    // $("裡面擺css選擇器").css("要改變什麼","變成怎樣")
+    // $(".box").css("background", "blue");
+    $(".wrap span:first-child").css("color", "red");
+    // 這行跟上一行的結果一樣 空一格的意思是 子層的意思 這邊跟 css選擇器一模一樣
+    $(".wrap > .box:first-child").css("background", "yellow");
+    // 選到該元素的最後一個子元素
+    $(".box:last-child").css("background", "blue");
+    // 選到這個種類的第一個元素
+    $(".box:first-of-type").css("font-size", "100px");
+    // 選到這個種類的最後一個元素
+    $(".box:last-of-type").css("font-size", "100px");
+    // 第三個子元素 的 背景變為黑色
+    $(".box:nth-child(3)").css("background", "black");
+    // 唯一的 type header 背景變為 pink  (h1.h6 都是唯一的所以都會變)
+    $(":header:only-of-type").css("background", "pink");
+  </script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button>click</button>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      //   $("button").click(function () {
+      //     console.log(123);
+      //   });
+      //   如果click 跟dblclick都給 兩個都會觸發 click會觸發兩次
+      $("button").dblclick(function () {
+        console.log(123);
+      });
+      $("button").hover(
+        function () {
+          console.log(456);
+        },
+        function () {
+          console.log(756);
+        }
+      );
+      $("button").mouseenter(function () {
+        console.log(888);
+      });
+    </script>
+  </body>
+</html>

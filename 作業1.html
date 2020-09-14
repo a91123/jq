@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: 150px auto;
+    }
+
+    table,
+    td,
+    tr {
+      border: 1px solid black;
+    }
+  </style>
+  <body>
+    <table>
+      <tr>
+        <td><input type="checkbox" name="" id="qqq" /></td>
+        <td class="box">Elon Musk</td>
+        <td class="box">0911234567</td>
+        <td class="box">elon@yahoo.com.tw</td>
+        <td id="del">刪除</td>
+      </tr>
+
+      <tr>
+        <td><input type="checkbox" name="" id="aaa" /></td>
+        <td class="box1">MUsakeurz</td>
+        <td class="box1">0933234567</td>
+        <td class="box1">MUsakeurz@yahoo.com.tw</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="" id="b" /></td>
+        <td class="box2">HUzery Musk</td>
+        <td class="box2">0922343567</td>
+        <td class="box2">HUzery@yahoo.com.tw</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="" id="c" /></td>
+        <td class="box3">Fazer Musk</td>
+        <td class="box3">0935234567</td>
+        <td class="box3">Fazer@yahoo.com.tw</td>
+      </tr>
+    </table>
+    <input type="text" name="" id="woo" />
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    // $("input:checkbox").click(function () {
+    //  一樣的寫法判斷方法is 或prop的差別而已
+    //   if ($(this).prop("checked")) {
+    //     $(this).closest("tr").css("background", "red");
+    //   } else {
+    //     $(this).closest("tr").css("background", "white");
+    //   }
+    // });
+    $("input:checkbox").click(function () {
+      if ($(this).is(":checked")) {
+        $(this).closest("tr").css("background", "red");
+      } else {
+        $(this).closest("tr").css("background", "white");
+      }
+    });
+  </script>
+</html>

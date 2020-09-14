@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* 使用addclass的方法加掛 class來改變樣式 這樣較為簡單且常用ㄋ*/
+    .cir {
+      width: 100px;
+      height: 100px;
+      background: red;
+      margin-bottom: 10px;
+      border-radius: 50%;
+      border: 5px transparent solid;
+    }
+    /* transparent是 透明色 這邊用來取消 border的副作用 (圖片會因為border往內縮 */
+    .border {
+      border: 5px solid black;
+    }
+  </style>
+  <body>
+    <div class="cir"></div>
+    <div class="cir"></div>
+    <div class="cir"></div>
+    <div class="cir"></div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"
+  ></script>
+  <!-- $(".cir").click(function () {
+$(this).css("border", "10px black solid");
+$(this).siblings().css("border", "");
+}) -->
+  <!-- if ($(".cir").attr("border")) {
+$(".cir").click(function () {
+$(".cir").css("border", "");
+});
+} -->
+  <script>
+    $(".cir").click(function () {
+      if ($(this).hasClass("border")) {
+        $(this).removeClass("border");
+      } else {
+        $(this).addClass("border").siblings().removeClass("border");
+      }
+    });
+  </script>
+</html>

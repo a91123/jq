@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <style>
+      ul {
+        position: absolute;
+        left: -250px;
+      }
+      .wrap {
+        position: relative;
+        max-width: 250px;
+        height: 250px;
+
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      img {
+        width: 250px;
+        height: 250px;
+
+        object-fit: cover;
+      }
+      .img-wrap {
+        width: 1250px;
+        left: -250;
+        transition: 0.5s;
+      }
+      .sild {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        bottom: 15px;
+        left: 0;
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        width: 100%;
+      }
+      .sild li {
+        margin-left: 5px;
+        width: 20px;
+        height: 10px;
+        border: 1px solid white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap mt-5">
+      <ul class="list-unstyled d-flex img-wrap">
+        <li><img src="./圖/1.jpg" alt="" /></li>
+        <li><img src="./圖/2.jpg" alt="" /></li>
+        <li><img src="./圖/3.jpg" alt="" /></li>
+        <li><img src="./圖/4.jpg" alt="" /></li>
+        <li><img src="./圖/5.jpg" alt="" /></li>
+      </ul>
+      <ul class="sild">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </body>
+</html>

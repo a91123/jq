@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="first">
+      <li class="a1">list item 1</li>
+      <li>list item 2</li>
+      <li class="a2">list item 3</li>
+    </ul>
+    <ul class="second">
+      <li class="a1">list item 1</li>
+      <li>list item 2</li>
+      <li class="2">list item 3</li>
+    </ul>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $("ul.first")
+        //   從ul .first 裡面 尋找 .a1把它背景變成紅色
+        .find(".a1")
+        .css("background-color", "red")
+        // 回到first ul
+        .end()
+        // 找到.a2 把他背景變成紅色((這是一個爬梯的過程 ul.first > a1 >用end返回 ul.first > 在找到.a2
+        .find(".a2")
+        .css("background-color", "green");
+    </script>
+  </body>
+</html>

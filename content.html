@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        height: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">apple</div>
+    <div class="box">cat</div>
+    <div class="box">dog</div>
+    <div class="box"><span>568</span></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+    <div>123456</div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    //名字裡面有 cat的改成紅色背(這邊選字)
+    $(".box:contains('cat')").css("background", "red");
+    //裡面沒有東西的 BOX 背景變紅色 要有寬高才能有背景顏色
+    $(".box:empty").css("background", "red");
+    // 如果box裡面有span 背景變呈粉紅色(這邊選元素)
+    $(".box:has(span)").css("background", "pink");
+  </script>
+</html>

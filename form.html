@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="action">
+        <label for="user-name"></label>
+<div><input type="text" name="user-name" class="user-name"></input>
+
+<label for="user-name2"></label></div>
+     
+        <div>
+            <input type="password" name="password" class="password"></input>
+
+      <button name='submit' type="submit" >submit</button>
+        </div>
+       <input type="text" id = "box" disabled>
+    </form>
+    <input type="checkbox">
+    <h1>55</h1>
+    <h1>123</h1>
+    <input type="checkbox" name="" id="">
+    <label for="">ckeck1</label>
+    <input type="checkbox" name="" id="">
+    <label for="">ckeck2</label>
+    <input type="checkbox" name="" id="">
+    <label for="">ckeck3</label>
+    <input type="checkbox" name="" id="">
+    <label for="">ckeck4</label>
+    <input type="checkbox" name="" id="">
+    <label for="">ckeck5</label>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    // type是 texrt的 input 背景變成紅色
+      $(":text").css("background","red")
+      // type是password的 input背景變綠色
+       $(":password").css("background", "green")
+      //  type如果是 submit 背景就變藍色
+        $(":submit").css("background", "blue");
+        // ~ 是後面的 所有的H1 +的話 就是後面的第一個H1
+        $(":checkbox ~h1").css("background", "red").css("font-size",'150px')
+        
+
+       
+     //印出 form中 有disabled 屬性的 id   
+ console.log($(":disabled").attr('id'))
+  </script>
+</html>
